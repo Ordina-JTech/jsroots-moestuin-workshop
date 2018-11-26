@@ -1,0 +1,11 @@
+// colours
+$main-black: #2A2A2A;
+
+/** backgrounds
+    Example: use as background-image: $sunset
+ **/
+$sunset: linear-gradient(-180deg, #77CAFF 0%, #F9EAE5 83%, #B9E1FF 100%);
+$dry-day: linear-gradient(-180deg, #6FB3DE 0%, #B9E1FF 100%);
+$rainy-day: linear-gradient(-180deg, #545454 0%, rgba(97,103,107,0.91) 0%, rgba(185,225,255,0.30) 100%);
+$grey-day: linear-gradient(-180deg, #404040 0%, rgba(211,235,254,0.35) 55%);
+$happy-sky : linear-gradient(-180deg, #427BCA 0%, #91BAF1 100%);

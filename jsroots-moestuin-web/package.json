@@ -1,0 +1,28 @@
+{
+  "name": "jsroots-moestuin-web",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Moestuin web",
+  "scripts": {
+    "build": "stencil build --prerender",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll"
+  },
+  "dependencies": {
+    "@stencil/core": "^0.13.2",
+    "@stencil/router": "0.3.0",
+    "bufferutil": "^4.0.0",
+    "socket.io-client": "^2.1.1",
+    "utf-8-validate": "^5.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ordina-JTech/jsroots-moestuin-web.git"
+  },
+  "author": "Desiree Hof",
+  "homepage": "https://github.com/Ordina-JTech/jsroots-moestuin-web",
+  "devDependencies": {
+    "@stencil/sass": "0.1.1"
+  }
+}

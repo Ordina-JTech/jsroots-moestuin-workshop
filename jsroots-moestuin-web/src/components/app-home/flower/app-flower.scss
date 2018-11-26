@@ -1,0 +1,83 @@
+@import "../../../global/variables.scss";
+
+p {
+  padding: 10px;
+}
+
+.background {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  
+
+  img {
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+  }
+
+  &--neutral {
+    background: $dry-day;
+  }
+
+  &--happy {
+    background: $happy-sky;
+  }
+
+  &--dead {
+    background: $grey-day;
+  }
+
+  &--dehydrated {
+    background: $sunset;
+  }
+
+  &--doubtful {
+    background: $rainy-day;
+  }
+
+  &--frozen {
+    background: rgb(211, 241, 253);
+  }
+
+  &--night {
+    background: $main-black;
+  }
+}
+
+.grass {
+  width: 100%;
+  height: 8vh;
+  border-radius: 0 0 10px 10px;
+
+  &--neutral {
+    background: rgb(38, 136, 25);
+  }
+
+  &--happy {
+    background: rgb(88, 153, 28);
+  }
+
+  &--dead {
+    background: rgb(173, 173, 173);
+  }
+
+  &--dehydrated {
+    background: rgb(228, 196, 178);
+  }
+
+  &--doubtful {
+    background: rgba(219, 184, 160, 0.781);
+  }
+
+  &--frozen {
+    background: rgb(198, 225, 238);
+  }
+
+  &--night {
+    background: rgb(10, 46, 16);
+  }
+}

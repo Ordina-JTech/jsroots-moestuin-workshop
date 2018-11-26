@@ -1,0 +1,25 @@
+<svg width="188px" height="386px" viewBox="0 0 188 386" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient x1="0.587066474%" y1="67.1708066%" x2="100%" y2="67.1708066%" id="branch">
+      <stop stop-color="#DECBB2" offset="0%"></stop>
+      <stop stop-color="#E4BF8D" offset="52.9488801%"></stop>
+      <stop stop-color="#B1997A" offset="100%"></stop>
+    </linearGradient>
+    <radialGradient cx="38.0485372%" cy="36.7092803%" fx="38.0485372%" fy="36.7092803%" r="85.2423726%" gradientTransform="translate(0.380485,0.367093),scale(1.000000,0.915584),rotate(-125.913468),scale(1.000000,0.914252),translate(-0.380485,-0.367093)" id="flower-body">
+      <stop stop-color="#F3EBBB" offset="0%"></stop>
+      <stop stop-color="#ECC015" offset="99.9254877%"></stop>
+      <stop stop-color="#DCD637" offset="100%"></stop>
+    </radialGradient>
+  </defs>
+    <g id="dead-flow" transform="translate(-108.000000, -15.000000)">
+      <g id="branch-desert" transform="translate(190.000000, 50.000000)" fill="url(#branch)">
+        <rect id="Rectangle" x="0" y="0" width="18" height="351"></rect>
+      </g>
+      <g id="bloom" transform="translate(129.000000, 15.000000)" fill="url(#flower-body)">
+        <ellipse id="Oval" cx="70.5" cy="77" rx="70.5" ry="77"></ellipse>
+      </g>
+      <path d="M213,73 C213,64.163444 208.29899,57 202.5,57 C196.70101,57 192,64.163444 192,73" id="Oval" stroke="#2A2A2A" stroke-width="2"></path>
+      <polygon id="X" fill="#000000" points="166.550327 65.1938477 164 65.1938477 169.589467 56.892985 164.35067 49 166.996634 49 170.98152 55.1953318 174.934527 49 177.452975 49 172.214178 56.892985 177.708008 65.1938477 175.083296 65.1938477 170.875257 58.5355196"></polygon>
+      <polygon id="X" fill="#000000" points="229.550327 65.1938477 227 65.1938477 232.589467 56.892985 227.35067 49 229.996634 49 233.98152 55.1953318 237.934527 49 240.452975 49 235.214178 56.892985 240.708008 65.1938477 238.083296 65.1938477 233.875257 58.5355196"></polygon>
+  </g>
+</svg>

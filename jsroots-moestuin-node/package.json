@@ -1,0 +1,45 @@
+{
+  "name": "jsroots-iot-your-moestuin",
+  "version": "0.1.1",
+  "description": "JSRoots IoT your moestuin with Javascript",
+  "main": "miflora.js",
+  "scripts": {
+    "test": "xo"
+  },
+  "keywords": [
+    "xiaomi",
+    "mi",
+    "flora",
+    "node",
+    "jsroots",
+    "javascript",
+    "stenciljs"
+  ],
+  "author": "Kevin Donkers <kevin.donkers@ordina.nl>",
+  "license": "MIT",
+  "dependencies": {
+    "@stencil/core": "^0.15.2",
+    "@stencil/router": "~0.3.0",
+    "body-parser": "^1.18.3",
+    "debug": "^2.6.0",
+    "express": "^4.16.3",
+    "http": "0.0.0",
+    "noble": "^1.7.0",
+    "node-mi-flora": "^0.1.1",
+    "npm": "^6.4.1",
+    "socket.io": "^2.1.1",
+    "xpc-connection": "sandeepmistry/node-xpc-connection#pull/26/head"
+  },
+  "resolutions": {
+    "xpc-connection": "sandeepmistry/node-xpc-connection#pull/26/head"
+  },
+  "devDependencies": {
+    "xo": "^0.17.1"
+  },
+  "xo": {
+    "space": true
+  },
+  "engines": {
+    "node": ">=6.9"
+  }
+}
