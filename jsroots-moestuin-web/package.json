@@ -2,7 +2,7 @@
   "name": "jsroots-moestuin-web",
   "private": true,
   "version": "0.0.1",
-  "description": "Moestuin web",
+  "description": "Full STEK je moestuin met JavaScript!",
   "scripts": {
     "build": "stencil build --prerender",
     "start": "stencil build --dev --watch --serve",
@@ -13,15 +13,16 @@
     "@stencil/core": "^0.13.2",
     "@stencil/router": "0.3.0",
     "bufferutil": "^4.0.0",
+    "nanoajax": "0.4.3",
     "socket.io-client": "^2.1.1",
     "utf-8-validate": "^5.0.1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ordina-JTech/jsroots-moestuin-web.git"
+    "url": "https://github.com/Ordina-JTech/jsroots-moestuin-workshop/tree/master/jsroots-moestuin-web"
   },
-  "author": "Desiree Hof",
-  "homepage": "https://github.com/Ordina-JTech/jsroots-moestuin-web",
+  "author": "JSRoots",
+  "homepage": "https://github.com/Ordina-JTech/jsroots-moestuin-workshop",
   "devDependencies": {
     "@stencil/sass": "0.1.1"
   }

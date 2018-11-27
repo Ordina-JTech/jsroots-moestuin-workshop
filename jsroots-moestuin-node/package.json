@@ -1,7 +1,7 @@
 {
-  "name": "jsroots-iot-your-moestuin",
+  "name": "jsroots-moestuin-node",
   "version": "0.1.1",
-  "description": "JSRoots IoT your moestuin with Javascript",
+  "description": "Full STEK je moestuin met JavaScript!",
   "main": "miflora.js",
   "scripts": {
     "test": "xo"
@@ -15,7 +15,7 @@
     "javascript",
     "stenciljs"
   ],
-  "author": "Kevin Donkers <kevin.donkers@ordina.nl>",
+  "author": "JSRoots",
   "license": "MIT",
   "dependencies": {
     "@stencil/core": "^0.15.2",
@@ -43,3 +43,4 @@
     "node": ">=6.9"
   }
 }
+
