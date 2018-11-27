@@ -14,12 +14,12 @@ let port = 8888;
 const app = express();
 const server = http.createServer(app);
 app.use(bodyParser.json());
-//TODO: (typing) io listen to server
+// TODO: Step 7
 
-//TODO: (typing) let server listen on port 8888
+// TODO: Step 4
 
 
-//TODO: Send data to backend localhost to showcase
+// TODO: Step 5
 
 
 // Listen to Flora events
@@ -30,7 +30,7 @@ flora.on('data', (data) => {
     updateDeviceData(data);
 });
 
-//TODO: (typing) start scanning flora.
+// TODO: Step 3
 
 // Update data received
 function updateDeviceData(data) {
@@ -41,5 +41,5 @@ function updateDeviceData(data) {
     } else {
         floraDevices[deviceIndex] = data;
     }
-    //TODO: (typing) emit floraDevices locally to socket when you call event 'data'.
+    // TODO: Step 8
 }

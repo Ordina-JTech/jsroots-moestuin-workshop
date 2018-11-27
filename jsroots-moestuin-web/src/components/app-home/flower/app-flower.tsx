@@ -64,7 +64,7 @@ export class FlowerComponent {
    * @param value The new flower sensor data.
    */
 
-  //TODO: Explanation of @watch & add onFlowerChanged and call calculateFlowerState
+  // TODO: Step 12
 
 
   /**
@@ -73,10 +73,11 @@ export class FlowerComponent {
    * triggered the first time the component loads.
    */
 
-  //TODO: call onFlowerChanged in componentWillLoad
+  // TODO: Step 13
   componentWillLoad() {
   }
 
+  // TODO: BONUS!
   @Method()
   calculateFlowerState() {
     if (this.lux <= 61 && this.lux > 50) {

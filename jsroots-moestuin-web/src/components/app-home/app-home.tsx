@@ -1,5 +1,5 @@
 import {Component, State} from "@stencil/core"
-//TODO: add socket.io-client
+// TODO: Step 6
 
 
 /**
@@ -15,7 +15,7 @@ import {Component, State} from "@stencil/core"
   shadow: true
 })
 export class AppHome {
-  //TODO: (paste) socketConnection (io) connect to localhost:8888
+  // TODO: Step 9
 
 
   /**
@@ -34,7 +34,7 @@ export class AppHome {
    * Called when the component is initialized.
    */
 
-  //TODO: (typing) (componentlifecycle) add updateFlowerData()
+  // TODO: Step 11
   componentWillLoad() {
   }
 
@@ -46,7 +46,7 @@ export class AppHome {
     this.loadSpinner();
   }
 
-  // TODO: updateFlowerData with the use of socket.io
+  // TODO: Step 10
   updateFlowerData() {
     // Listen to the socket connection "data" event
 

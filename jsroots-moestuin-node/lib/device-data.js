@@ -1,5 +1,5 @@
 class DeviceData {
-    //TODO: (paste) contructor and get JSON.
+    // TODO: Step 1
 
     toString() {
         return JSON.stringify(this.getJSON());

@@ -75,7 +75,7 @@ class MiFlora extends EventEmitter {
             moisture,
             fertility);
 
-        //TODO: (paste) emit data to server
+        // TODO: Step 2
 
     }
 
