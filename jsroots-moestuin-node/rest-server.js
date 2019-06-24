@@ -4,7 +4,6 @@ const http = require('http');
 const bodyParser = require('body-parser');
 const io = require('socket.io')(http);
 
-
 // Initialize MiFlora library
 let flora = new MiFlora();
 let floraDevices = [];
@@ -36,7 +35,7 @@ flora.on('data', (data) => {
 function updateDeviceData(data) {
     let deviceIndex = floraDevices.findIndex(x => x.deviceId === data.deviceId);
 
-    if (deviceIndex == -1) {
+    if (deviceIndex === -1) {
         floraDevices.push(data);
     } else {
         floraDevices[deviceIndex] = data;
