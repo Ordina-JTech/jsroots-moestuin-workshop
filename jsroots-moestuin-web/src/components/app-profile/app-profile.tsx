@@ -16,5 +16,15 @@ export class AppProfile {
   }
 
   render(): JSX.Element {
+    if (this.match && this.match.params.name) {
+      return (
+          <div class="app-profile">
+            <p>
+              Hello! My name is {this.normalize(this.match.params.name)}. My name was passed in
+              through a route param!
+            </p>
+          </div>
+      );
+    }
   }
 }
