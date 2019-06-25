@@ -24,14 +24,10 @@
     "debug": "^2.6.0",
     "express": "^4.16.3",
     "http": "0.0.0",
-    "noble": "^1.7.0",
+    "noble-mac": "https://github.com/Timeular/noble-mac.git",
     "node-mi-flora": "^0.1.1",
     "npm": "^6.4.1",
-    "socket.io": "^2.1.1",
-    "xpc-connection": "sandeepmistry/node-xpc-connection#pull/26/head"
-  },
-  "resolutions": {
-    "xpc-connection": "sandeepmistry/node-xpc-connection#pull/26/head"
+    "socket.io": "^2.1.1"
   },
   "devDependencies": {
     "xo": "^0.17.1"

@@ -1,5 +1,5 @@
 const EventEmitter = require('events');
-const noble = require('noble');
+const noble = require('noble-mac');
 const DeviceData = require('./lib/device-data');
 
 const DEFAULT_DEVICE_NAME = 'Flower care';
