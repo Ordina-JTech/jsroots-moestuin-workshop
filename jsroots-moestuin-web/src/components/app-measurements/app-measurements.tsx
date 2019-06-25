@@ -1,4 +1,4 @@
-import { Component, Prop } from '@stencil/core';
+import {Component, h, Prop} from '@stencil/core';
 
 @Component({
   tag: 'app-measurements',
@@ -12,7 +12,7 @@ export class AppMeasurements {
   @Prop() moisture: number;
   @Prop() temperature: number;
 
-  render(): JSX.Element {
+  render() {
     return (
       <div class='app-measurements'>
         <div class='measure-type'>
@@ -22,10 +22,10 @@ export class AppMeasurements {
           <p>fertility:</p>
         </div>
         <div class='measure-result'>
-          <p>{ this.temperature }°C</p>
-          <p>{ this.lux }</p>
-          <p>{ this.moisture }%</p>
-          <p>{ this.fertility }</p>
+          <p>{this.temperature}°C</p>
+          <p>{this.lux}</p>
+          <p>{this.moisture}%</p>
+          <p>{this.fertility}</p>
         </div>
       </div>
     );

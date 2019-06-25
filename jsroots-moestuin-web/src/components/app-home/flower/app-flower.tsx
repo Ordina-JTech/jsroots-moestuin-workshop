@@ -1,4 +1,4 @@
-import {Component, Prop, State, Method, Watch} from "@stencil/core";
+import {Component, h, Method, Prop, State, Watch} from "@stencil/core";
 
 const FLOWERSTATES = {
   DEAD_FLOWER: 'dead-flower',
@@ -69,7 +69,8 @@ export class FlowerComponent {
     this.temperature = value.temperature;
     this.lux = value.lux;
     this.moisture = value.moisture;
-    this.fertility = value.fertility;this.calculateFlowerState();
+    this.fertility = value.fertility;
+    this.calculateFlowerState();
   }
 
   /**
@@ -84,7 +85,7 @@ export class FlowerComponent {
   // TODO: BONUS!
   @Method()
   calculateFlowerState() {
-    if (this.fertility < 100 ) {
+    if (this.fertility < 100) {
       this.flowerImageState = FLOWERSTATES.DOUBTFUL_FLOWER;
     } else {
 
@@ -104,7 +105,7 @@ export class FlowerComponent {
 
   }
 
-  render(): JSX.Element {
+  render() {
     let image: any;
     let backgroundClass: string;
     let grassType: string;

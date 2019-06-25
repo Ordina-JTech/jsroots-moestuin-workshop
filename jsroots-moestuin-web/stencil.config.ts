@@ -10,7 +10,13 @@ export const config: Config = {
     })
   ],
   globalStyle: 'src/global/app.scss',
-  nodeResolve: {
-    browser:true
-  }
+  globalScript: 'src/global/app.ts',
+  outputTargets: [
+    {
+      type: 'www',
+      // comment the following line to disable service workers in production
+      serviceWorker: null,
+      baseUrl: 'https://myapp.local/'
+    }
+  ]
 };

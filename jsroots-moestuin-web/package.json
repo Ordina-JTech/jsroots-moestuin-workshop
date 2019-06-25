@@ -4,14 +4,14 @@
   "version": "0.0.1",
   "description": "Full STEK je moestuin met JavaScript!",
   "scripts": {
-    "build": "stencil build --prerender",
+    "build": "stencil build",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll"
   },
   "dependencies": {
-    "@stencil/core": "^0.13.2",
-    "@stencil/router": "0.3.0",
+    "@stencil/core": "^1.1.1",
+    "@stencil/router": "^1.0.0",
     "bufferutil": "^4.0.0",
     "nanoajax": "0.4.3",
     "socket.io-client": "^2.1.1",
@@ -24,7 +24,6 @@
   "author": "JSRoots",
   "homepage": "https://github.com/Ordina-JTech/jsroots-moestuin-workshop",
   "devDependencies": {
-    "@stencil/sass": "0.1.1",
-    "node": "^8.16.0"
+    "@stencil/sass": "^1.0.1"
   }
 }
