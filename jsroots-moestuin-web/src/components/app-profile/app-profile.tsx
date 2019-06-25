@@ -1,4 +1,4 @@
-import {Component, Prop} from '@stencil/core';
+import {Component, Prop, h} from '@stencil/core';
 import {MatchResults} from '@stencil/router';
 
 @Component({
@@ -15,7 +15,7 @@ export class AppProfile {
     return '';
   }
 
-  render(): JSX.Element {
+  render() {
     if (this.match && this.match.params.name) {
       return (
           <div class="app-profile">

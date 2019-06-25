@@ -5,78 +5,45 @@
  */
 
 
-import '@stencil/core';
-
-import '@stencil/router';
-import '@stencil/state-tunnel';
-
+import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
+import {
+  MatchResults,
+} from '@stencil/router';
 
 export namespace Components {
-
-  interface AppHome {
-    'socketConnection': any;
-  }
-  interface AppHomeAttributes extends StencilHTMLAttributes {
-    'socketConnection'?: any;
-  }
-
   interface AppFlower {
-    'calculateFlowerState': () => void;
+    'calculateFlowerState': () => Promise<void>;
     /**
     * Device reading object that is passed from the app-home component to this flower component. Contains all the flower data (deviceId, etc).
     */
     'flower': any;
   }
-  interface AppFlowerAttributes extends StencilHTMLAttributes {
-    /**
-    * Device reading object that is passed from the app-home component to this flower component. Contains all the flower data (deviceId, etc).
-    */
-    'flower'?: any;
-  }
-
+  interface AppHome {}
   interface AppMeasurements {
     'fertility': number;
     'lux': number;
     'moisture': number;
     'temperature': number;
   }
-  interface AppMeasurementsAttributes extends StencilHTMLAttributes {
-    'fertility'?: number;
-    'lux'?: number;
-    'moisture'?: number;
-    'temperature'?: number;
+  interface AppProfile {
+    'match': MatchResults;
   }
-
   interface AppRoot {}
-  interface AppRootAttributes extends StencilHTMLAttributes {}
 }
 
 declare global {
-  interface StencilElementInterfaces {
-    'AppHome': Components.AppHome;
-    'AppFlower': Components.AppFlower;
-    'AppMeasurements': Components.AppMeasurements;
-    'AppRoot': Components.AppRoot;
-  }
 
-  interface StencilIntrinsicElements {
-    'app-home': Components.AppHomeAttributes;
-    'app-flower': Components.AppFlowerAttributes;
-    'app-measurements': Components.AppMeasurementsAttributes;
-    'app-root': Components.AppRootAttributes;
-  }
-
-
-  interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
-  var HTMLAppHomeElement: {
-    prototype: HTMLAppHomeElement;
-    new (): HTMLAppHomeElement;
-  };
 
   interface HTMLAppFlowerElement extends Components.AppFlower, HTMLStencilElement {}
   var HTMLAppFlowerElement: {
     prototype: HTMLAppFlowerElement;
     new (): HTMLAppFlowerElement;
+  };
+
+  interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
+  var HTMLAppHomeElement: {
+    prototype: HTMLAppHomeElement;
+    new (): HTMLAppHomeElement;
   };
 
   interface HTMLAppMeasurementsElement extends Components.AppMeasurements, HTMLStencilElement {}
@@ -85,33 +52,61 @@ declare global {
     new (): HTMLAppMeasurementsElement;
   };
 
+  interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {}
+  var HTMLAppProfileElement: {
+    prototype: HTMLAppProfileElement;
+    new (): HTMLAppProfileElement;
+  };
+
   interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {}
   var HTMLAppRootElement: {
     prototype: HTMLAppRootElement;
     new (): HTMLAppRootElement;
   };
-
   interface HTMLElementTagNameMap {
-    'app-home': HTMLAppHomeElement
-    'app-flower': HTMLAppFlowerElement
-    'app-measurements': HTMLAppMeasurementsElement
-    'app-root': HTMLAppRootElement
-  }
-
-  interface ElementTagNameMap {
-    'app-home': HTMLAppHomeElement;
     'app-flower': HTMLAppFlowerElement;
+    'app-home': HTMLAppHomeElement;
     'app-measurements': HTMLAppMeasurementsElement;
+    'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
   }
-
-
-  export namespace JSX {
-    export interface Element {}
-    export interface IntrinsicElements extends StencilIntrinsicElements {
-      [tagName: string]: any;
-    }
-  }
-  export interface HTMLAttributes extends StencilHTMLAttributes {}
-
 }
+
+declare namespace LocalJSX {
+  interface AppFlower extends JSXBase.HTMLAttributes<HTMLAppFlowerElement> {
+    /**
+    * Device reading object that is passed from the app-home component to this flower component. Contains all the flower data (deviceId, etc).
+    */
+    'flower'?: any;
+  }
+  interface AppHome extends JSXBase.HTMLAttributes<HTMLAppHomeElement> {}
+  interface AppMeasurements extends JSXBase.HTMLAttributes<HTMLAppMeasurementsElement> {
+    'fertility'?: number;
+    'lux'?: number;
+    'moisture'?: number;
+    'temperature'?: number;
+  }
+  interface AppProfile extends JSXBase.HTMLAttributes<HTMLAppProfileElement> {
+    'match'?: MatchResults;
+  }
+  interface AppRoot extends JSXBase.HTMLAttributes<HTMLAppRootElement> {}
+
+  interface IntrinsicElements {
+    'app-flower': AppFlower;
+    'app-home': AppHome;
+    'app-measurements': AppMeasurements;
+    'app-profile': AppProfile;
+    'app-root': AppRoot;
+  }
+}
+
+export { LocalJSX as JSX };
+
+
+declare module "@stencil/core" {
+  export namespace JSX {
+    interface IntrinsicElements extends LocalJSX.IntrinsicElements {}
+  }
+}
+
+

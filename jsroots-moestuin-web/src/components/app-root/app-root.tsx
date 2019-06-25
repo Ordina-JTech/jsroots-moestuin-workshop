@@ -1,4 +1,4 @@
-import { Component } from '@stencil/core';
+import { Component, h } from '@stencil/core';
 
 
 @Component({
@@ -8,7 +8,7 @@ import { Component } from '@stencil/core';
 })
 export class AppRoot {
 
-  render(): JSX.Element {
+  render() {
     return (
       <div>
         <main>

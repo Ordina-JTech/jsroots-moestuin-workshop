@@ -1,4 +1,4 @@
-import {Component, Prop, State, Method} from "@stencil/core";
+import {Component, Prop, State, Method, h} from "@stencil/core";
 
 const FLOWERSTATES = {
   DEAD_FLOWER: 'dead-flower',
@@ -93,7 +93,7 @@ export class FlowerComponent {
     }
   }
 
-  render(): JSX.Element {
+  render() {
     let image: any;
     let backgroundClass: string;
     let grassType: string;

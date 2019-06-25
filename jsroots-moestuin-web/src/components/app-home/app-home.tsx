@@ -1,4 +1,4 @@
-import {Component, State} from "@stencil/core"
+import {Component, State, h} from "@stencil/core"
 // TODO: Step 6
 
 
@@ -62,7 +62,7 @@ export class AppHome {
   }
 
 
-  render(): JSX.Element {
+  render() {
     return (
       <div class="container">
         <div class="grid">
