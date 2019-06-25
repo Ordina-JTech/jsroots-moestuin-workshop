@@ -24,6 +24,7 @@
   "author": "JSRoots",
   "homepage": "https://github.com/Ordina-JTech/jsroots-moestuin-workshop",
   "devDependencies": {
-    "@stencil/sass": "0.1.1"
+    "@stencil/sass": "0.1.1",
+    "node": "^8.16.0"
   }
 }

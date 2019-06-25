@@ -1,4 +1,4 @@
-import {Component, Prop, State, Method} from "@stencil/core";
+import {Component, Prop, State, Method, Watch} from "@stencil/core";
 
 const FLOWERSTATES = {
   DEAD_FLOWER: 'dead-flower',
@@ -63,34 +63,45 @@ export class FlowerComponent {
    *
    * @param value The new flower sensor data.
    */
-
-  // TODO: Step 12
-
+  @Watch('flower')
+  onFlowerChanged(value: IDeviceValues) {
+    this.deviceId = value.deviceId;
+    this.temperature = value.temperature;
+    this.lux = value.lux;
+    this.moisture = value.moisture;
+    this.fertility = value.fertility;this.calculateFlowerState();
+  }
 
   /**
    * When the component is initializing, trigger the
    * calculation once because the @Watch doesn't get
    * triggered the first time the component loads.
    */
-
-  // TODO: Step 13
   componentWillLoad() {
+    this.onFlowerChanged(this.flower)
   }
 
   // TODO: BONUS!
   @Method()
   calculateFlowerState() {
-    if (this.lux <= 61 && this.lux > 50) {
-      this.flowerImageState = FLOWERSTATES.DEHYDRATED_FLOWER;
-    } else if (this.lux >= 340) {
-      this.flowerImageState = FLOWERSTATES.DEAD_FLOWER;
-    } else if (this.lux > 180 && this.lux < 340) {
-      this.flowerImageState = FLOWERSTATES.HAPPY_FLOWER;
-    } else if (this.lux <= 50) {
-      this.flowerImageState = FLOWERSTATES.SLEEPY_FLOWER;
+    if (this.fertility < 100 ) {
+      this.flowerImageState = FLOWERSTATES.DOUBTFUL_FLOWER;
     } else {
-      this.flowerImageState = FLOWERSTATES.NEUTRAL_FLOWER;
+
+      if (this.lux <= 61 && this.lux > 50) {
+        this.flowerImageState = FLOWERSTATES.DEHYDRATED_FLOWER;
+      } else if (this.lux >= 340) {
+        this.flowerImageState = FLOWERSTATES.DEAD_FLOWER;
+      } else if (this.lux > 180 && this.lux < 340) {
+        this.flowerImageState = FLOWERSTATES.HAPPY_FLOWER;
+      } else if (this.lux <= 50) {
+        this.flowerImageState = FLOWERSTATES.SLEEPY_FLOWER;
+      } else {
+        this.flowerImageState = FLOWERSTATES.NEUTRAL_FLOWER;
+      }
+
     }
+
   }
 
   render(): JSX.Element {

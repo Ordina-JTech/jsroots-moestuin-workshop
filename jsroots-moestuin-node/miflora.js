@@ -75,8 +75,7 @@ class MiFlora extends EventEmitter {
             moisture,
             fertility);
 
-        // TODO: Step 2
-
+        this.emit('data', deviceData);
     }
 
     parseFirmwareData(peripheral, data) {

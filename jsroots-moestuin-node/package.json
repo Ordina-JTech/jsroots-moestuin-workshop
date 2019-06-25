@@ -4,6 +4,7 @@
   "description": "Full STEK je moestuin met JavaScript!",
   "main": "miflora.js",
   "scripts": {
+    "start": "node_modules/node/bin/node rest-server.js",
     "test": "xo"
   },
   "keywords": [
@@ -30,6 +31,7 @@
     "socket.io": "^2.1.1"
   },
   "devDependencies": {
+    "node": "^8.16.0",
     "xo": "^0.17.1"
   },
   "xo": {
@@ -39,4 +41,3 @@
     "node": ">=6.9"
   }
 }
-

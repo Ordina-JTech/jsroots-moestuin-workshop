@@ -13,13 +13,15 @@ let port = 8888;
 const app = express();
 const server = http.createServer(app);
 app.use(bodyParser.json());
-// TODO: Step 7
+io.listen(server);
 
-// TODO: Step 4
+server.listen(port);
 
-
-// TODO: Step 5
-
+app.get('/devices', (req, res) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+    res.json(floraDevices);
+});
 
 // Listen to Flora events
 flora.on('data', (data) => {
@@ -29,7 +31,7 @@ flora.on('data', (data) => {
     updateDeviceData(data);
 });
 
-// TODO: Step 3
+flora.startScanning();
 
 // Update data received
 function updateDeviceData(data) {
@@ -40,5 +42,5 @@ function updateDeviceData(data) {
     } else {
         floraDevices[deviceIndex] = data;
     }
-    // TODO: Step 8
+    io.local.emit('data', floraDevices);
 }

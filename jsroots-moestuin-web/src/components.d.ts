@@ -9,6 +9,9 @@ import '@stencil/core';
 
 import '@stencil/router';
 import '@stencil/state-tunnel';
+import {
+  MatchResults,
+} from '@stencil/router';
 
 
 export namespace Components {
@@ -47,6 +50,13 @@ export namespace Components {
     'temperature'?: number;
   }
 
+  interface AppProfile {
+    'match': MatchResults;
+  }
+  interface AppProfileAttributes extends StencilHTMLAttributes {
+    'match'?: MatchResults;
+  }
+
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
 }
@@ -56,6 +66,7 @@ declare global {
     'AppHome': Components.AppHome;
     'AppFlower': Components.AppFlower;
     'AppMeasurements': Components.AppMeasurements;
+    'AppProfile': Components.AppProfile;
     'AppRoot': Components.AppRoot;
   }
 
@@ -63,6 +74,7 @@ declare global {
     'app-home': Components.AppHomeAttributes;
     'app-flower': Components.AppFlowerAttributes;
     'app-measurements': Components.AppMeasurementsAttributes;
+    'app-profile': Components.AppProfileAttributes;
     'app-root': Components.AppRootAttributes;
   }
 
@@ -85,6 +97,12 @@ declare global {
     new (): HTMLAppMeasurementsElement;
   };
 
+  interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {}
+  var HTMLAppProfileElement: {
+    prototype: HTMLAppProfileElement;
+    new (): HTMLAppProfileElement;
+  };
+
   interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {}
   var HTMLAppRootElement: {
     prototype: HTMLAppRootElement;
@@ -95,6 +113,7 @@ declare global {
     'app-home': HTMLAppHomeElement
     'app-flower': HTMLAppFlowerElement
     'app-measurements': HTMLAppMeasurementsElement
+    'app-profile': HTMLAppProfileElement
     'app-root': HTMLAppRootElement
   }
 
@@ -102,6 +121,7 @@ declare global {
     'app-home': HTMLAppHomeElement;
     'app-flower': HTMLAppFlowerElement;
     'app-measurements': HTMLAppMeasurementsElement;
+    'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
   }
 

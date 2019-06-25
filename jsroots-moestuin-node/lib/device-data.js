@@ -1,5 +1,18 @@
 class DeviceData {
-    // TODO: Step 1
+    constructor(deviceId, temperature, lux, moisture, fertility) {
+        this.deviceId = deviceId;
+        this.temperature = temperature;
+        this.lux = lux;
+        this.moisture = moisture;
+        this.fertility = fertility;
+    }
+
+    getJSON() {
+        return {
+            deviceId: this.deviceId, temperature: this.temperature, lux: this.lux,
+            moisture: this.moisture, fertility: this.fertility
+        }
+    }
 
     toString() {
         return JSON.stringify(this.getJSON());
